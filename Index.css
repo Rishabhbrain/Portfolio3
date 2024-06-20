@@ -1,0 +1,99 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.header {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header.navbar-brand {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.hero {
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.hero button {
+    background-color: #3498db;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #2980b9;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.skill-card img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.skill-card h5 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #f1c40f;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}

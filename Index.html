@@ -15,34 +15,37 @@
             background-color: #f5f5f5;
         }
 
-        header {
+        .header {
             background-color: #3498db;
             color: #ffffff;
             padding: 20px 0;
             text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        header h1 {
-            font-size: 24px;
-            font-weight: 700;
+        .header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
         }
 
-        header p {
-            font-size: 18px;
-            font-weight: 300;
+        .header nav ul li {
+            margin-right: 20px;
         }
 
-        nav a {
+        .header nav a {
             color: #ffffff;
             transition: color 0.3s ease;
         }
 
-        nav a:hover {
+        .header nav a:hover {
             color: #f1c40f;
         }
 
         .hero {
-            background-image: url('images/hero.jpg');
+            background-image: url('https://img.freepik.com/free-photo/3d-dark-grunge-display-background-with-smoky-atmosphere_1048-16218.jpg?t=st=1718915508~exp=1718919108~hmac=b98031df77c607e55c306edde508cd69d4527ca29b0fa18c1f1caafd7edc5641&w=900');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -76,21 +79,8 @@
             background-color: #2980b9;
         }
 
-        section {
+        .skills {
             padding: 60px 0;
-        }
-
-        .card {
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
         .skill-card {
@@ -101,13 +91,41 @@
             border-radius: 4px;
         }
 
-        .skill-card img {
-            width: 50px;
-            height: 50px;
-            margin-right: 20px;
+        .skill-card i {
+            font-size: 24px;
+            margin-right: 10px;
         }
 
         .skill-card h5 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .about {
+            padding: 60px 0;
+        }
+
+        .about img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .experience {
+            padding: 60px 0;
+        }
+
+        .experience h5 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .education {
+            padding: 60px 0;
+        }
+
+        .education h5 {
             font-size: 18px;
             font-weight: 700;
         }
@@ -132,131 +150,140 @@
 
 <body>
     <!-- Header -->
-    <header class="text-center py-5">
-        <div class="container">
-            <h1 class="animate__animated animate__fadeInDown">Your Name</h1>
-            <p class="lead animate__animated animate__fadeInUp">Aspiring Software Engineer & Web Developer</p>
-            <nav class="nav justify-content-center animate__animated animate__fadeIn">
-                <a class="nav-link" href="index.html">Home</a>
-                <a class="nav-link" href="about.html">About Me</a>
-                <a class="nav-link" href="projects.html">Projects</a>
-                <a class="nav-link" href="skills.html">Skills</a>
-                <a class="nav-link" href="contact.html">Contact</a>
-            </nav>
-        </div>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Your Name</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="skills.html">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 class="animate__animated animate__fadeInDown" style="color: #3498db;">Welcome to my portfolio!</h1>
-            <p class="animate__animated animate__fadeInUp">I'm a final year BTech student in Computer Science and Engineering, passionate about creating innovative software solutions and building dynamic web applications.</p>
-            <button class="btn btn-primary animate__animated animate__fadeIn">Learn More</button>
-        </div>
-    </section>
-
-    <!-- Introduction Section -->
-    <section class="bg-light text-center">
-        <div class="container">
             <div class="row">
-                <div class="col-lg-6 mx-auto">
-                    <h2 class="animate__animated animate__fadeInLeft">About Me</h2>
-                    <p class="animate__animated animate__fadeInRight">I am a final year BTech student in Computer Science and Engineering. I have a passion for creating innovative software solutions and building dynamic web applications. My expertise lies in full-stack development, machine learning, and cloud computing.</p>
+                <div class="col-md-6">
+                    <h1 class="animate__animated animate__fadeInDown">Welcome to my portfolio!</h1>
+                    <p class="animate__animated animate__fadeInUp">I'm a final year BTech student in Computer Science and Engineering, passionate about creating innovative software solutions and building dynamic web applications.</p>
+                    <button class="btn btn-primary animate__animated animate__fadeIn">Learn More</button>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://img.freepik.com/free-photo/young-handsome-man-wearing-casual-tshirt-blue-background-happy-face-smiling-with-crossed-arms-looking-camera-positive-person_839833-12963.jpg?t=st=1718915602~exp=1718919202~hmac=2ce1084084daaf1a77d3f72cd558548820a996e925403e762a6bd49089042916&w=996" class="img-fluid" alt="Hero Image">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Projects Section -->
-    <section class="text-center">
+    <!-- About Section -->
+    <section class="about">
         <div class="container">
-            <h2 class="mb-4 animate__animated animate__fadeInUp">Featured Projects</h2>
+            <h2 class="mb-4 animate__animated animate__fadeInLeft">About Me</h2>
             <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="images/project1.jpg" class="card-img-top" alt="Project 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">A brief description of Project 1. It could be a web application, a mobile app, or a machine learning model.</p>
-                            <a href="project1.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                    <p>I'm a final year BTech student in Computer Science and Engineering, passionate about creating innovative software solutions and building dynamic web applications.</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="images/project2.jpg" class="card-img-top" alt="Project 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">A brief description of Project 2. It could be a web application, a mobile app, or a machine learning model.</p>
-                            <a href="project2.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                    <img src="images/about.jpg" class="img-fluid" alt="About Image">
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="images/project3.jpg" class="card-img-top" alt="Project 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 3</h5>
-                            <p class="card-text">A brief description of Project 3. It could be a web application, a mobile app, or a machine learning model.</p>
-                            <a href="project3.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="images/project2.jpg" class="card-img-top" alt="Project 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">A brief description of Project 2. It could be a web application, a mobile app, or a machine learning model.</p>
-                            <a href="project2.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="bg-light text-center">
+    <section class="skills">
         <div class="container">
             <h2 class="mb-4 animate__animated animate__fadeInLeft">My Skills</h2>
-            <divclass="row">
-                <div class="col-md-3 mb-4">
+            <div class="row">
+                <div class="col-md-4 mb-4">
                     <div class="skill-card">
-                        <img src="images/python.png" class="img-fluid" alt="Python">
-                        <h5 class="mt-2">Python</h5>
+                        <i class="fas fa-code"></i>
+                        <h5 class="mt-2">Programming Languages</h5>
+                        <ul>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>Java</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 mb-4">
                     <div class="skill-card">
-                        <img src="images/javascript.png" class="img-fluid" alt="JavaScript">
-                        <h5 class="mt-2">JavaScript</h5>
+                        <i class="fas fa-database"></i>
+                        <h5 class="mt-2">Databases</h5>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>PostgreSQL</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 mb-4">
                     <div class="skill-card">
-                        <img src="images/react.png" class="img-fluid" alt="React">
-                        <h5 class="mt-2">React</h5>
+                        <i class="fas fa-cloud"></i>
+                        <h5 class="mt-2">Cloud Platforms</h5>
+                        <ul>
+                            <li>AWS</li>
+                            <li>Azure</li>
+                            <li>Google Cloud</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="skill-card">
-                        <img src="images/javascript.png" class="img-fluid" alt="JavaScript">
-                        <h5 class="mt-2">JavaScript</h5>
-                    </div>
+                <!-- Add more skill categories and items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="container">
+            <h2 class="mb-4 animate__animated animate__fadeInLeft">Experience</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Internship at XYZ Company</h5>
+                    <p>Worked on a project to develop a web application using Python and Django.</p>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="skill-card">
-                        <img src="images/javascript.png" class="img-fluid" alt="JavaScript">
-                        <h5 class="mt-2">JavaScript</h5>
-                    </div>
+                <div class="col-md-6">
+                    <h5>Project Collaboration with ABC Team</h5>
+                    <p>Contributed to a project to build a machine learning model using TensorFlow and Python.</p>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="skill-card">
-                        <img src="images/nodejs.png" class="img-fluid" alt="Node.js">
-                        <h5 class="mt-2">Node.js</h5>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+        <div class="container">
+            <h2 class="mb-4 animate__animated animate__fadeInLeft">Education</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>BTech in Computer Science and Engineering</h5>
+                    <p>XYZ University, 2020-2024</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>High School Diploma</h5>
+                    <p>ABC High School, 2016-2020</p>
                 </div>
             </div>
         </div>
