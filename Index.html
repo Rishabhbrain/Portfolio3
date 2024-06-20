@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        nav a {
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f1c40f;
+        }
+
+        .hero {
+            background-image: url('images/hero.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+        .hero button {
+            background-color: #3498db;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero button:hover {
+            background-color: #2980b9;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-card {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .skill-card img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .skill-card h5 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        footer {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #f1c40f;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="text-center py-5">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">Your Name</h1>
+            <p class="lead animate__animated animate__fadeInUp">Aspiring Software Engineer & Web Developer</p>
+            <nav class="nav justify-content-center animate__animated animate__fadeIn">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About Me</a>
+                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link" href="skills.html">Skills</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown" style="color: #3498db;">Welcome to my portfolio!</h1>
+            <p class="animate__animated animate__fadeInUp">I'm a final year BTech student in Computer Science and Engineering, passionate about creating innovative software solutions and building dynamic web applications.</p>
+            <button class="btn btn-primary animate__animated animate__fadeIn">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="bg-light text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <h2 class="animate__animated animate__fadeInLeft">About Me</h2>
+                    <p class="animate__animated animate__fadeInRight">I am a final year BTech student in Computer Science and Engineering. I have a passion for creating innovative software solutions and building dynamic web applications. My expertise lies in full-stack development, machine learning, and cloud computing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="text-center">
+        <div class="container">
+            <h2 class="mb-4 animate__animated animate__fadeInUp">Featured Projects</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/project1.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 1</h5>
+                            <p class="card-text">A brief description of Project 1. It could be a web application, a mobile app, or a machine learning model.</p>
+                            <a href="project1.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/project2.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 2</h5>
+                            <p class="card-text">A brief description of Project 2. It could be a web application, a mobile app, or a machine learning model.</p>
+                            <a href="project2.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/project3.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 3</h5>
+                            <p class="card-text">A brief description of Project 3. It could be a web application, a mobile app, or a machine learning model.</p>
+                            <a href="project3.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/project2.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 2</h5>
+                            <p class="card-text">A brief description of Project 2. It could be a web application, a mobile app, or a machine learning model.</p>
+                            <a href="project2.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="bg-light text-center">
+        <div class="container">
+            <h2 class="mb-4 animate__animated animate__fadeInLeft">My Skills</h2>
+            <divclass="row">
+                <div class="col-md-3 mb-4">
+                    <div class="skill-card">
+                        <img src="images/python.png" class="img-fluid" alt="Python">
+                        <h5 class="mt-2">Python</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="skill-card">
+                        <img src="images/javascript.png" class="img-fluid" alt="JavaScript">
+                        <h5 class="mt-2">JavaScript</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="skill-card">
+                        <img src="images/react.png" class="img-fluid" alt="React">
+                        <h5 class="mt-2">React</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="skill-card">
+                        <img src="images/javascript.png" class="img-fluid" alt="JavaScript">
+                        <h5 class="mt-2">JavaScript</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="skill-card">
+                        <img src="images/javascript.png" class="img-fluid" alt="JavaScript">
+                        <h5 class="mt-2">JavaScript</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="skill-card">
+                        <img src="images/nodejs.png" class="img-fluid" alt="Node.js">
+                        <h5 class="mt-2">Node.js</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-light text-center">
+        <div class="container">
+            <h2 class="mb-4 animate__animated animate__fadeInLeft">Get in Touch</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control"></textarea>
+                        </div>
+                        <button class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p>&copy; 2024 Your Name | <a href="mailto:yourname@example.com" class="text-primary">yourname@example.com</a></p>
+        <div>
+            <a href="https://www.linkedin.com/in/yourprofile" class="text-primary mr-3">LinkedIn</a>
+            <a href="https://github.com/yourprofile" class="text-primary mr-3">GitHub</a>
+            <a href="https://twitter.com/yourprofile" class="text-primary">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
