@@ -1,99 +1,188 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #f5f5f5;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #495057;
 }
 
-.header {
-    background-color: #3498db;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
+.navbar-vertical {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background-color: #333;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
 }
 
-.header.navbar-brand {
-    font-size: 24px;
-    font-weight: 700;
+.navbar-vertical ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-vertical ul li {
+    margin: 20px 0;
+}
+
+.navbar-vertical ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.navbar-vertical ul li a:hover {
+    color: #00bfff;
+}
+
+.navbar-vertical ul li a::after {
+    content: attr(title);
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translateY(-50%);
+    background: #00bfff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.navbar-vertical ul li a:hover::after {
+    opacity: 1;
 }
 
 .hero {
-    background-image: url('images/hero.jpg');
+    min-height: 100vh;
+    background-image: url('https://plus.unsplash.com/premium_vector-1681408004997-50cea8e61545?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-}
-
-.hero h1 {
-    font-size: 36px;
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 24px;
-    font-weight: 300;
-}
-
-.hero button {
-    background-color: #3498db;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: 700;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.hero button:hover {
-    background-color: #2980b9;
-}
-
-.card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 20px;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.skill-card {
     display: flex;
     align-items: center;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.skill-card img {
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-}
-
-.skill-card h5 {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.footer {
-    background-color: #3498db;
-    color: #ffffff;
-    padding: 20px 0;
+    justify-content: space-around;
+    padding: 100px 0;
+    color: #fff;
     text-align: center;
 }
 
-.footer a {
-    color: #f1c40f;
-    transition: color 0.3s ease;
+.hero-content {
+    max-width: 800px;
 }
 
-.footer a:hover {
-    color: #ffffff;
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn-primary {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border-radius: 30px;
+}
+
+.hero-profile {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.hero-profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#typing-skills {
+    font-style: italic;
+    border-right: 2px solid;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.text-primary {
+    color: #007bff !important;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #00bfff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* Add this CSS to your existing Index.css file */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.skills .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.skills .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills .card-body i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.skills .card-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills .card-body ul li {
+    margin-bottom: 0.5rem;
 }
